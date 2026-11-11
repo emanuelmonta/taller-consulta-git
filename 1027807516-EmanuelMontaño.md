@@ -72,3 +72,56 @@ Antes de sistemas como Git, el desarrollo colaborativo era un proceso caótico y
 * Características principales: Es una solución de código abierto (open-source) de peso ligero, diseñada para ser autohospedada. Es sumamente rápida, consume pocos recursos de hardware y ofrece una experiencia muy similar a GitHub pero bajo control total del usuario o la empresa. *
 
 * Modelo: Gratuito y de código abierto para quienes prefieren alojar sus propios servidores de Git en lugar de depender de grandes nubes comerciales.*
+
+*4*
+### Glosario básico de Git
+
+*Commit*
+
+* Definición: Es una instantánea o punto de control (checkpoint) que guarda el estado actual de los archivos en el repositorio local. Cada commit incluye un identificador único, un mensaje descriptivo y registra exactamente qué cambios se hicieron.
+
+* Ejemplo práctico: Después de escribir la estructura inicial de una página de inicio (index.html), ejecutas git commit -m "feat: agregar estructura HTML inicial" para congelar y guardar ese progreso de forma permanente en el historial.*
+
+*Branch (Rama)*
+
+* Definición: Es una línea de desarrollo independiente que te permite trabajar en nuevas funcionalidades, correcciones o experimentos sin alterar el código principal o estable del proyecto (que suele llamarse main o master).
+
+* Ejemplo práctico: Para desarrollar un módulo de inicio de sesión sin romper la aplicación actual que ya funciona, creas y te cambias a una nueva rama ejecutando git checkout -b feature/login.*
+
+*Merge (Fusión)*
+
+* Definición: Es el proceso de combinar el historial y los cambios realizados en una rama (por ejemplo, una rama de características) con otra rama principal (como main), integrando todo el trabajo nuevo.
+
+* Ejemplo práctico: Una vez que terminaste y probaste el módulo de inicio de sesión en tu rama feature/login, te pasas a main y ejecutas git merge feature/login para incorporar todo ese código nuevo al proyecto principal.*
+
+*Pull y Push*
+
+* Definición: Son los comandos fundamentales para sincronizar tu repositorio local con un repositorio remoto en la nube (como GitHub):*
+
+* Push: Envía tus commits locales hacia el servidor remoto para compartirlos o respaldarlos.
+
+* Pull: Descarga y fusiona automáticamente los últimos cambios del servidor remoto hacia tu computadora.
+
+* Ejemplo práctico: Al terminar tu jornada laboral, ejecutas git push origin main para subir tus avances a GitHub. Al día siguiente, antes de empezar a programar de nuevo, ejecutas git pull origin main para asegurarte de tener la versión más actualizada que subieron tus compañeros.*
+
+*Pull Request (PR)*
+
+* Definición: Es una solicitud formal en una plataforma web (como GitHub) para avisar al equipo que has terminado una rama de trabajo y que propones fusionarla (merge) en la rama principal. Permite revisar el código, hacer comentarios y discutir cambios antes de integrarlos.
+
+* Ejemplo práctico: Subes tu rama de la pasarela de pagos a GitHub y abres un Pull Request titulado "Añadir pasarela de pagos" para que el líder del equipo o tus compañeros revisen las líneas de código antes de autorizar su pase a producción.*
+
+*Clone (Clonar)*
+
+* Definición: Es la acción de descargar una copia completa y exacta de un repositorio remoto existente (con todo su historial de versiones y ramas) desde la nube hacia tu computadora por primera vez.
+
+* Ejemplo práctico: Cuando un compañero te comparte el enlace de un proyecto nuevo en GitHub, abres tu terminal y escribes git clone [https://github.com/usuario/proyecto.git](https://github.com/usuario/proyecto.git) para descargarlo y empezar a trabajar inmediatamente en tu máquina.*
+
+*Upstream (y su diferencia con Origin)*
+
+* Definición:
+
+* Origin: Es el alias predeterminado que Git le asigna al repositorio remoto original del cual clonaste tu proyecto.
+
+* Upstream: Es el alias que comúnmente se le asigna al repositorio remoto principal u oficial (el de la organización o autor original) cuando estás colaborando en proyectos ajenos mediante un fork, sirviendo como referencia para sincronizar las actualizaciones globales.
+
+* Ejemplo práctico: Si haces un fork del repositorio de una empresa, tu repositorio personal en GitHub se convierte en origin, mientras que el repositorio oficial de la empresa de donde sacaste la copia se configura como upstream para poder jalar (pull) las actualizaciones generales que vayan lanzando.*

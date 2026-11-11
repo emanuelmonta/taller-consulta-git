@@ -156,3 +156,33 @@ El uso de ramas ofrece beneficios clave tanto si se programa en solitario como e
 
 * **Colaboración sin sobreescrituras:** Cada miembro del equipo puede trabajar en su propia rama (*feature branches*) de manera independiente, evitando alterar o romper el trabajo de sus compañeros.
 * **Revisiones de código estructuradas (*Pull Requests*):** Facilita que el equipo revise, discuta y pruebe el código de una rama antes de fusionarlo (*merge*) al repositorio principal, garantizando altos estándares de calidad.
+
+*6*
+# ¿Qué es GitFlow?
+
+**GitFlow** es un modelo de flujo de trabajo (*workflow*) para Git, propuesto por Vincent Driessen en 2010. Define una estructura estricta de ramificación diseñada alrededor del ciclo de liberación (*release*) del software. Su objetivo principal es organizar y estructurar proyectos que tienen un ciclo de lanzamiento programado, separando claramente el código en desarrollo del código que ya está en producción.
+
+---
+
+### Estructura de sus ramas principales
+
+El modelo se basa en dos ramas principales de larga duración y tres ramas auxiliares de vida corta:
+
+1. **`master` (o `main`)**
+* **Función:** Contiene el código oficial que está listo para producción. Cada cambio en esta rama representa una versión o lanzamiento oficial estable que ya está disponible para los usuarios finales.
+
+
+2. **`develop`**
+* **Función:** Es la rama de integración principal. Contiene todo el código nuevo que se ha completado para la próxima versión y sirve como base para construir las nuevas funcionalidades.
+
+
+3. **`feature` (Ramas de características)**
+* **Función:** Se crean a partir de `develop` para desarrollar nuevas funcionalidades de manera aislada (por ejemplo, `feature/login` o `feature/carrito`). Una vez terminadas, se fusionan (*merge*) nuevamente en `develop`.
+
+
+4. **`release` (Ramas de lanzamiento)**
+* **Función:** Permiten preparar una nueva versión para producción. Se ramifican desde `develop` cuando este ya incluye todas las características del nuevo lanzamiento. En esta fase se realizan correcciones de errores menores y ajustes de última hora antes de pasar a producción. Al finalizar, se fusionan tanto en `master` como en `develop`.
+
+
+5. **`hotfix` (Ramas de corrección urgente)**
+* **Función:** Se utilizan para solucionar errores críticos descubiertos en producción (*master*) de forma inmediata. Se ramifican directamente desde `master` y, una vez solucionado el problema, se fusionan tanto en `master` como en `develop` para asegurar que el error quede resuelto en todo el ciclo.

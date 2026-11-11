@@ -45,3 +45,30 @@ Antes de sistemas como Git, el desarrollo colaborativo era un proceso caótico y
 * Git opera de manera distribuida; cada desarrollador tiene una copia completa del historial en su máquina local. *
 
 * GitHub actúa como un servidor centralizado remoto donde los equipos sincronizan sus repositorios locales para centralizar el trabajo compartido. *
+
+*3*
+### ¿Qué es una nube de repositorios?
+* Una nube de repositorios (o servicio de alojamiento de código en la nube) es una plataforma basada en web que permite almacenar, gestionar y sincronizar repositorios de Git de forma remota. *
+
+* Mientras que Git funciona de manera local en tu computadora, la "nube" actúa como un servidor centralizado al que múltiples desarrolladores pueden conectarse. Esto facilita la colaboración en equipo, la copia de seguridad (backup) del código fuente, la revisión de cambios (pull/merge requests), la gestión de tareas (issues) y la automatización de procesos de integración y despliegue continuo (CI/CD). *
+
+* Alternativas en el mercado (Plataformas de alojamiento Git)
+* Además de GitHub, existen otras plataformas líderes en la industria que ofrecen servicios similares con diferentes enfoques y características: *
+
+*GitLab*
+
+* Características principales: Es una plataforma completa que destaca por integrar de forma nativa potentes herramientas de CI/CD (Integración y Despliegue Continuo), gestión de proyectos, escaneo de seguridad y control de calidad de código directamente en su interfaz. *
+
+* Modelo: Ofrece versión gratuita en la nube, planes de pago empresariales y la opción de autoalojamiento (self-hosted) en servidores propios. *
+
+*Bitbucket*
+
+* Características principales: Desarrollado por Atlassian, está optimizado para integrarse de manera fluida con otras herramientas del mismo ecosistema corporativo, como Jira (para gestión de proyectos ágiles) y Confluence. *
+
+* Modelo: Muy popular en entornos empresariales y corporativos que ya utilizan productos de Atlassian. Ofrece repositorios privados gratuitos para equipos pequeños. * 
+
+*Gitea (o Forgejo)*
+
+* Características principales: Es una solución de código abierto (open-source) de peso ligero, diseñada para ser autohospedada. Es sumamente rápida, consume pocos recursos de hardware y ofrece una experiencia muy similar a GitHub pero bajo control total del usuario o la empresa. *
+
+* Modelo: Gratuito y de código abierto para quienes prefieren alojar sus propios servidores de Git en lugar de depender de grandes nubes comerciales.*

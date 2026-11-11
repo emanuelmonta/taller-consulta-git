@@ -162,8 +162,6 @@ El uso de ramas ofrece beneficios clave tanto si se programa en solitario como e
 
 **GitFlow** es un modelo de flujo de trabajo (*workflow*) para Git, propuesto por Vincent Driessen en 2010. Define una estructura estricta de ramificación diseñada alrededor del ciclo de liberación (*release*) del software. Su objetivo principal es organizar y estructurar proyectos que tienen un ciclo de lanzamiento programado, separando claramente el código en desarrollo del código que ya está en producción.
 
----
-
 ### Estructura de sus ramas principales
 
 El modelo se basa en dos ramas principales de larga duración y tres ramas auxiliares de vida corta:
